@@ -12,18 +12,18 @@ import UICircularProgressRing
 @objc public extension UICircularProgressRing
 {
     var theme_innerRingColor: ThemeColorPicker? {
-        get { return getThemePicker(self, "setInnerRingColor:") as? ThemeColorPicker }
-        set { setThemePicker(self, "setInnerRingColor:", newValue) }
+        get { return getThemePicker(self, "BCsetInnerRingColor:") as? ThemeColorPicker }
+        set { setThemePicker(self, "BCsetInnerRingColor:", newValue) }
     }
     
     var theme_outerRingColor: ThemeColorPicker? {
-        get { return getThemePicker(self, "setOuterRingColor:") as? ThemeColorPicker }
-        set { setThemePicker(self, "setOuterRingColor:", newValue) }
+        get { return getThemePicker(self, "BCsetOuterRingColor:") as? ThemeColorPicker }
+        set { setThemePicker(self, "BCsetOuterRingColor:", newValue) }
     }
     
     var theme_fontColor: ThemeColorPicker? {
-        get { return getThemePicker(self, "setFontColor:") as? ThemeColorPicker }
-        set { setThemePicker(self, "setFontColor:", newValue) }
+        get { return getThemePicker(self, "BCsetFontColor:") as? ThemeColorPicker }
+        set { setThemePicker(self, "BCsetFontColor:", newValue) }
     }
 }
 @objc public extension UIView
