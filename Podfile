@@ -7,5 +7,6 @@ target 'PlistDemo' do
 
   pod 'SSZipArchive'
   pod 'MBProgressHUD'
+  pod 'UICircularProgressRing'
 
 end

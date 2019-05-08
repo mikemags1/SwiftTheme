@@ -14,6 +14,7 @@ Pod::Spec.new do |s|
   s.source_files = 'Source'
   
   s.swift_version = "4.2"
-  s.swift_versions = ['4.2', '5.0']
+  
+  s.dependency 'UICircularProgressRing', '~>6.1.0'
 
 end

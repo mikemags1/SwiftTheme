@@ -7,7 +7,15 @@
 //
 
 import UIKit
+import UICircularProgressRing
 
+@objc public extension UIView
+{
+    var theme_innerRingColor: ThemeCGFloatPicker? {
+        get { return getThemePicker(self, "setInnerRingColor:") as? ThemeColorPicker }
+        set { setThemePicker(self, "setInnerRingColor:", newValue) }
+    }
+}
 @objc public extension UIView
 {
     var theme_alpha: ThemeCGFloatPicker? {
