@@ -5,27 +5,8 @@
 //  Created by Gesen on 16/1/22.
 //  Copyright © 2016年 Gesen. All rights reserved.
 //
-
 import UIKit
-import UICircularProgressRing
 
-@objc public extension UICircularProgressRing
-{
-    var theme_innerRingColor: ThemeColorPicker? {
-        get { return getThemePicker(self, "BCsetInnerRingColor:") as? ThemeColorPicker }
-        set { setThemePicker(self, "BCsetInnerRingColor:", newValue) }
-    }
-    
-    var theme_outerRingColor: ThemeColorPicker? {
-        get { return getThemePicker(self, "BCsetOuterRingColor:") as? ThemeColorPicker }
-        set { setThemePicker(self, "BCsetOuterRingColor:", newValue) }
-    }
-    
-    var theme_fontColor: ThemeColorPicker? {
-        get { return getThemePicker(self, "BCsetFontColor:") as? ThemeColorPicker }
-        set { setThemePicker(self, "BCsetFontColor:", newValue) }
-    }
-}
 @objc public extension UIView
 {
     var theme_alpha: ThemeCGFloatPicker? {
@@ -326,7 +307,7 @@ import UICircularProgressRing
 private func getThemePicker(
     _ object : NSObject,
     _ selector : String
-) -> ThemePicker? {
+    ) -> ThemePicker? {
     return object.themePickers[selector]
 }
 
@@ -334,7 +315,7 @@ private func setThemePicker(
     _ object : NSObject,
     _ selector : String,
     _ picker : ThemePicker?
-) {
+    ) {
     object.themePickers[selector] = picker
     object.performThemePicker(selector: selector, picker: picker)
 }
@@ -344,7 +325,7 @@ private func makeStatePicker(
     _ selector : String,
     _ picker : ThemePicker?,
     _ state : UIControl.State
-) -> ThemePicker? {
+    ) -> ThemePicker? {
     
     var picker = picker
     
